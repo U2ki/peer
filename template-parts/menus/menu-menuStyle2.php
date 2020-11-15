@@ -28,8 +28,6 @@
 						'menu_id'        => 'primary-menu',
 					) );
 				?>
-
-				<?php airi_header_cart_search(); ?>
 			</nav><!-- #site-navigation -->
 
 		</div>

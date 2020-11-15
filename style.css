@@ -1018,7 +1018,7 @@ a:hover, a:active {
 .main-navigation li {
   display: inline-block;
   position: relative;
-  padding: 0 15px;
+  padding: 0 10px;
   font-weight: 500;
 }
 .main-navigation li:first-of-type {
@@ -1388,7 +1388,7 @@ a:hover, a:active {
 }
 
 ul.header-search-cart {
-  margin-left: 85px;
+  margin-left: 45px;
 }
 ul.header-search-cart li {
   padding: 0;
@@ -4480,4 +4480,21 @@ object {
   overflow: hidden;
   width:100%;
   margin-bottom: 5em;
+}
+
+.menu-main-menu-container {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+}
+
+.contact {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact-body {
+  text-align: center;
 }

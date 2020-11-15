@@ -17,8 +17,8 @@ get_header();
 $layout = airi_blog_layout();
 ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( $layout['type'] ); ?> <?php echo esc_attr( $layout['cols'] ); ?>">
-		<main id="main" class="site-main">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
 		<?php
 		if ( have_posts() ) :
 
@@ -28,7 +28,7 @@ $layout = airi_blog_layout();
 			?>
 			<div class="blog-loop" <?php echo airi_masonry_data(); ?>>
 				<div class="row">
-				<div class="grid-sizer"></div>
+                    <div class="grid-sizer"></div>
 
 				<?php
 				/* Start the Loop */
