@@ -1018,7 +1018,7 @@ a:hover, a:active {
 .main-navigation li {
   display: inline-block;
   position: relative;
-  padding: 0 10px;
+  padding: 0 25px;
   font-weight: 500;
 }
 .main-navigation li:first-of-type {
@@ -4495,6 +4495,380 @@ footer {
   margin: 0 auto;
 }
 
-.contact-body {
+.menu {
   text-align: center;
+}
+
+/* Contact Form 7 css */
+.form__wrap {
+  width: 100%;
+  max-width: 900px;/*フォームの最大幅*/
+  margin-right: auto;
+  margin-left: auto;
+}
+.wpcf7 .template02 {
+  color: #666;
+  font-size: 16px;
+}
+.wpcf7 .template02 a {
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  color: inherit;
+  transition: opacity .25s;
+}
+.wpcf7 .template02 a:hover {
+  opacity: .5;
+  transition: opacity .25s;
+}
+.wpcf7 .template02 div.form__row {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #efe8e5;
+}
+.wpcf7 .template02 div.form__row.row-privacy,
+.wpcf7 .template02 div.form__row.row-submit {
+  display: block;
+  border-top: 0;
+  margin-top: 2em;
+  text-align: center;
+}
+.wpcf7 .template02 p.form__label,
+.wpcf7 .template02 p.form__body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wpcf7 .template02 p.form__label {
+  width: 36%;
+  padding: 1.5em 1em;
+}
+.wpcf7 .template02 p.form__body {
+  width: 64%;
+  padding: 1.5em 1em;
+}
+.wpcf7 .template02 div.form__row.row-privacy .form__body,
+.wpcf7 .template02 div.form__row.row-submit .form__body {
+  width: 100%;
+}
+.wpcf7 .template02 p.form__label label {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 44px;
+  box-sizing: border-box;
+}
+.wpcf7 .template02 p.form__label label::after {
+  content: "任意";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  margin: 0;
+  padding: 0 5px;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  color: #929292;
+  font-size: 11px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.wpcf7 .template02 p.form__label.is-required label {
+  position: relative;
+}
+.wpcf7 .template02 p.form__label.is-required label::after {
+  content: "必須";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  padding: 0 5px;
+  background-color: #e35050;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+/* テキストフィールド */
+.wpcf7 .template02 input[type=text],
+.wpcf7 .template02 input[type=tel],
+.wpcf7 .template02 input[type=email],
+.wpcf7 .template02 textarea {
+  width: 100%;
+  margin: 0;
+  padding: .5em 1em;
+  border: 1px solid #c4bbb8;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: #fefefe;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* テキストフィールド placeholder */
+.wpcf7 .template01 input[type=text]::placeholder,
+.wpcf7 .template01 input[type=tel]::placeholder,
+.wpcf7 .template01 input[type=email]::placeholder,
+.wpcf7 .template01 input[type=url]::placeholder,
+.wpcf7 .template01 input[type=date]::placeholder,
+.wpcf7 .template01 input[type=number]::placeholder,
+.wpcf7 .template01 textarea::placeholder {
+  color: #ccc;
+}
+.wpcf7 .template01 input[type=text]:-ms-input-placeholder,
+.wpcf7 .template01 input[type=tel]:-ms-input-placeholder,
+.wpcf7 .template01 input[type=email]:-ms-input-placeholder,
+.wpcf7 .template01 input[type=url]:-ms-input-placeholder,
+.wpcf7 .template01 input[type=date]:-ms-input-placeholder,
+.wpcf7 .template01 input[type=number]:-ms-input-placeholder,
+.wpcf7 .template01 textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+.wpcf7 .template01 input[type=text]::-ms-input-placeholder,
+.wpcf7 .template01 input[type=tel]::-ms-input-placeholder,
+.wpcf7 .template01 input[type=email]::-ms-input-placeholder,
+.wpcf7 .template01 input[type=url]::-ms-input-placeholder,
+.wpcf7 .template01 input[type=date]::-ms-input-placeholder,
+.wpcf7 .template01 input[type=number]::-ms-input-placeholder,
+.wpcf7 .template01 textarea::-ms-input-placeholder {
+  color: #ccc;
+}
+/* テキストフィールド フォーカス時 */
+.wpcf7 .template01 input[type=text]:focus,
+.wpcf7 .template01 input[type=tel]:focus,
+.wpcf7 .template01 input[type=email]:focus,
+.wpcf7 .template01 input[type=url]:focus,
+.wpcf7 .template01 input[type=date]:focus,
+.wpcf7 .template01 input[type=number]:focus,
+.wpcf7 .template01 textarea:focus {
+  outline: 0;
+  border: 1px #e35050 solid;
+  box-shadow: 0 0 2px 2px rgba(227, 80, 80, 0.5);
+}
+/* チェックボックス */
+.wpcf7 .template02 input[type=checkbox] {
+  display: none;
+}
+.wpcf7 .template02 input[type=checkbox] + span {
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0 1em 0 1.8em;
+  font-size: inherit;
+  box-sizing: border-box;
+  transition: opacity .25s ease;
+}
+.wpcf7 .template02 input[type=checkbox] + span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.24em;
+  height: 1.24em;
+  border: 1px solid #c4bbb8;
+  border-radius: 4px;
+  background-color: #fefefe;
+  box-sizing: border-box;
+}
+.wpcf7 .template02 input[type=checkbox] + span::after {
+  content: "";
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0.15em;
+  left: 0.44em;
+  width: 0.4em;
+  height: .8em;
+  border-bottom: 3px solid #000;
+  border-right: 3px solid #000;
+  box-sizing: border-box;
+  transform: rotate(40deg);
+  transition: opacity .25s ease;
+}
+.wpcf7 .template02 input[type=checkbox]:checked + span {
+  color: #e35050;
+  transition: all .25s ease;
+}
+.wpcf7 .template02 input[type=checkbox]:checked + span::before {
+  opacity: 1;
+  border: 1px solid #e35050;
+  box-shadow: 0 0 2px 2px rgba(227, 80, 80, 0.5);
+  background-color: #e35050;
+  transition: opacity .25s ease;
+}
+.wpcf7 .template02 input[type=checkbox]:checked + span::after {
+  opacity: 1;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: opacity .25s ease;
+}
+/* ラジオボタン */
+.wpcf7 .template02 input[type=radio] {
+  display: none;
+}
+.wpcf7 .template02 input[type=radio] + span {
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0 1em 0 1.8em;
+  font-size: inherit;
+  box-sizing: border-box;
+  transition: opacity .25s ease;
+}
+.wpcf7 .template02 input[type=radio] + span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #c4bbb8;
+  border-radius: 50%;
+  background-color: #fefefe;
+  box-sizing: border-box;
+  transition: opacity .25s ease;
+}
+.wpcf7 .template02 input[type=radio] + span::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  box-sizing: border-box;
+  transition: opacity .25s ease;
+}
+.wpcf7 .template02 input[type=radio]:checked + span {
+  color: #e35050;
+}
+.wpcf7 .template02 input[type=radio]:checked + span::before {
+  box-shadow: 0 0 2px 2px rgba(227, 80, 80, 0.5);
+}
+.wpcf7 .template02 input[type=radio]:checked + span::after {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background-color: #e35050;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: opacity .25s ease;
+}
+/* セレクト */
+.wpcf7 .template02 span.select-wrap {
+  position: relative;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wpcf7 .template02 select {
+  cursor: pointer;
+  width: 250px;
+  max-width: 100%;
+  margin: 0;
+  padding: .5em 3.5em .5em 1em;
+  border: 1px solid #c4bbb8;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: #fefefe;
+  background-position: 100% 0;
+  background-size: 2em 3.5em;
+  background-repeat: no-repeat;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, outline 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.wpcf7 .template02 select::-ms-expand {
+  display: none;
+}
+.wpcf7 .template02 span.select-wrap::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  width: .6em;
+  height: .6em;
+  top: 50%;
+  right: .8em;
+  margin-top: -3px;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  transform: rotate(45deg) translateY(-50%);
+  transform-origin: 50% 0;
+  box-sizing: border-box;
+}
+
+/* 送信ボタン */
+.wpcf7 .template02 .submit-btn {
+  position: relative;
+  width: 320px;
+  height: 65px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wpcf7 .template02 input[type="submit"] {
+  cursor: pointer;
+  width: 320px;
+  max-width: 100%;
+  padding: 18px;
+  box-shadow: none;
+  border: 1px #e35050 solid;
+  border-radius: 8px;
+  background-color: #e35050;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all .25s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.wpcf7 .template02 input[type="submit"]:disabled {
+  cursor: not-allowed;
+  box-shadow: none!important;
+  border: 1px solid #e35050!important;
+  background-color: #e35050!important;
+  color: #f8f8f8!important;
+}
+.wpcf7 .template02 input[type="submit"]:hover {
+  box-shadow: 0 0 2px 2px rgba(227, 80, 80, 0.5);
+  background-color: #fff;
+  color: #e35050;
+  transition: all .25s;
+}
+.wpcf7 .template02 input[type="submit"]:focus {
+  outline: 0;
+  border: 1px #e35050 solid;
+  box-shadow: 0 0 2px 2px rgba(133, 112, 92, 0.5);
+}
+@media only screen and (max-width: 768px) {
+  .wpcf7 .template02 div.form__row {
+    display: block;
+  }
+  .wpcf7 .template02 p.form__label {
+    width: 100%;
+    padding: 1.5em 1em 0;
+  }
+  .wpcf7 .template02 p.form__body {
+    width: 100%;
+    padding: 1em 1em 1.5em;
+  }
 }

@@ -7,51 +7,41 @@
  * @package Airi
  */
 
-$airi_layout        = airi_blog_layout();
-$airi_read_more     = get_theme_mod( 'read_more_text', __( 'Read more', 'airi' ) );
-$airi_hide_thumb    = get_theme_mod( 'index_hide_thumb' );
-$airi_hide_date     = get_theme_mod( 'index_hide_date' );
-$airi_hide_cats     = get_theme_mod( 'index_hide_cats' );
-$airi_hide_author   = get_theme_mod( 'index_hide_author' );
-$airi_hide_comments = get_theme_mod( 'index_hide_comments' );
+$airi_layout 	= airi_blog_layout();
+$airi_read_more 		= get_theme_mod( 'read_more_text', __( 'Read more', 'airi' ) );
+$airi_hide_thumb 	= get_theme_mod( 'index_hide_thumb' );
+$airi_hide_date 		= get_theme_mod( 'index_hide_date' );
+$airi_hide_cats 		= get_theme_mod( 'index_hide_cats' );
+$airi_hide_author 	= get_theme_mod( 'index_hide_author' );
+$airi_hide_comments 	= get_theme_mod( 'index_hide_comments' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="post-inner">
-        <div class="flex">
+	<div class="post-inner">
+		<div class="flex">
 
 			<?php if ( $airi_hide_thumb == '' ) : ?>
-                <div class="<?php echo esc_attr( $airi_layout['item_inner_cols'] ); ?>">
-					<?php
-					if ( has_post_thumbnail() ) {
-						airi_post_thumbnail();
-					} else {
-						?>
-                        <a href="<?php the_permalink(); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="no-image" style="margin-bottom: 28px;">
-                        </a>
-						<?php
-					}
-					?>
-                </div>
+			<div class="<?php echo esc_attr( $airi_layout['item_inner_cols'] ); ?>">
+				<?php airi_post_thumbnail(); ?>
+			</div>
 			<?php endif; ?>
 
-            <div class="post-info <?php echo esc_attr( $airi_layout['item_inner_cols'] ); ?>">
-                <header class="entry-header">
+			<div class="post-info <?php echo esc_attr( $airi_layout['item_inner_cols'] ); ?>">
+				<header class="entry-header">
 					<?php
-					if ( $airi_hide_date == '' ) {
-						airi_posted_on();
-					}
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						if ( $airi_hide_date == '' ) {
+							airi_posted_on();
+						}
+						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 					if ( 'post' === get_post_type() ) : ?>
-                        <div class="entry-meta">
-							<?php
+					<div class="entry-meta">
+						<?php
 							if ( $airi_hide_cats == '' ) {
-								echo '<span>';
+							echo '<span>';
 								airi_first_category();
-								echo '</span>';
+							echo '</span>';
 							}
 							if ( $airi_layout['type'] != 'layout-grid' && $airi_layout['type'] != 'layout-masonry' && $airi_hide_author == '' ) {
 								airi_posted_by();
